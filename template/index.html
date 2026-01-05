@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <h1>Recorded Data</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Pub Date</th>
+        </tr>
+        {% if contexts %}
+        {% for context in contexts %}
+        <tr>
+            <td>{{context.name}}</td>
+            <td>{{context.email}}</td>
+            <td>{{context.phone}}</td>
+            <td>{{context.pub_date}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+</div>
+{% endblock body %}
