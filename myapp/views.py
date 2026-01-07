@@ -7,5 +7,4 @@ def home(request):
         'contexts2': Myusers.objects.all(),
         'contexts3': Customers.objects.all(),
     }
-    
     return render(request, 'index.html', allData)
