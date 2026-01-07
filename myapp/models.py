@@ -8,7 +8,7 @@ class Mycontact(models.Model):
     pub_date = models.DateTimeField(default=datetime.now)
 class Myusers(models.Model):
     users = models.CharField(max_length=200)
-    email = models.EmailField(50)
+    email = models.EmailField(max_length=50)
 class Customers(models.Model):
     customer = models.CharField(max_length=20)
     phn = models.CharField(max_length=12)
