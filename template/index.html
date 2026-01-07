@@ -9,16 +9,47 @@
             <th>Phone</th>
             <th>Pub Date</th>
         </tr>
-        {% if contexts %}
-        {% for context in contexts %}
+        {% if contexts1 %}
+        {% for context1 in contexts1 %}
         <tr>
-            <td>{{context.name}}</td>
-            <td>{{context.email}}</td>
-            <td>{{context.phone}}</td>
-            <td>{{context.pub_date}}</td>
+            <td>{{context1.name}}</td>
+            <td>{{context1.email}}</td>
+            <td>{{context1.phone}}</td>
+            <td>{{context1.pub_date}}</td>
         </tr>
         {% endfor %}
         {% endif %}
     </table>
+    <h1 class="mt-5">Users</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        {% if contexts2 %}
+        {% for context2 in contexts2 %}
+        <tr>
+            <td>{{context2.users}}</td>
+            <td>{{context2.email}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+    <h1 class="mt-5">Customers</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Customer</th>
+            <th>Phone</th>
+        </tr>
+        {% if contexts3 %}
+        {% for context3 in contexts3 %}
+        <tr>
+            <td>{{context3.customer}}</td>
+            <td>{{context3.phn}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+    
 </div>
 {% endblock body %}
