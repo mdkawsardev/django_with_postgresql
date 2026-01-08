@@ -8,3 +8,21 @@ def home(request):
         'contexts3': Customers.objects.all(),
     }
     return render(request, 'index.html', allData)
+def insert(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        Mycontact.objects.create(
+            name = name,
+            email = email,
+            phone = phone
+        )
+        #? Same as above
+        # con = Mycontact(
+        #     name = name,
+        #     email = email,
+        #     phone = phone
+        # )
+        # con.save()
+    return render(request, 'insert.html')
