@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Mycontact, Myusers, Customers
+from django.contrib import messages
 # Create your views here.
 def home(request):
     allData = {
@@ -25,4 +26,5 @@ def insert(request):
         #     phone = phone
         # )
         # con.save()
+        msg = messages.success(request, "Data has been recorded!")
     return render(request, 'insert.html')
