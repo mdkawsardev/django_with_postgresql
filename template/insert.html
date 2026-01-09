@@ -4,12 +4,12 @@
 <div class="container">
 
 {% if messages %}
-{% for message in messages %}
-<div class="alert alert-success {{ message.tags }} alert-dismissible fade show" role="alert">
-    <strong>{{ message }}</strong>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-{% endfor %}
+    {% for message in messages %}
+        <div class="alert alert-success {{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Data recorded successfully!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
 {% endif %}
     <h1 class="my-5">Insert Data</h1>
         <form action="/insert/" method="post">
