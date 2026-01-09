@@ -26,5 +26,5 @@ def insert(request):
         #     phone = phone
         # )
         # con.save()
-        # msg = messages.success(request, "Data has been recorded!")
+        msg = messages.success(request, "Data has been recorded!")
     return render(request, 'insert.html')
