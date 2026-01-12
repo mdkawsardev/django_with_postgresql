@@ -8,6 +8,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Pub Date</th>
+            <th>Banner</th>
         </tr>
         {% if contexts1 %}
         {% for context1 in contexts1 %}
@@ -16,6 +17,9 @@
             <td>{{context1.email}}</td>
             <td>{{context1.phone}}</td>
             <td>{{context1.pub_date}}</td>
+            <td>
+                <img style="width: 50px; height:40px;" src="{{context1.banner.url}}" alt="{{context1.name}}">
+            </td>
         </tr>
         {% endfor %}
         {% endif %}
