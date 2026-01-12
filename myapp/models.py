@@ -6,7 +6,7 @@ class Mycontact(models.Model):
     email = models.EmailField(max_length=50)
     phone = models.CharField(max_length=12)
     pub_date = models.DateTimeField(default=datetime.now)
-    banner = models.ImageField(default='fallback.png', blank=True)
+    banner = models.ImageField(default='logo.png', blank=True)
 class Myusers(models.Model):
     users = models.CharField(max_length=200)
     email = models.EmailField(max_length=50)
