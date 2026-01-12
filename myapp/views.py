@@ -14,10 +14,12 @@ def insert(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
+        photo = request.FILES.get('photo')
         Mycontact.objects.create(
             name = name,
             email = email,
-            phone = phone
+            phone = phone,
+            banner = photo
         )
         #? Same as above
         # con = Mycontact(
