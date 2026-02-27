@@ -9,6 +9,7 @@ class MycontactAdmin(admin.ModelAdmin):
 @admin.register(Myusers)
 class amarUser(admin.ModelAdmin):
     list_display = ['users', 'email']
+    
 @admin.register(Customers)
 class amarCustomer(admin.ModelAdmin):
     list_display = ['customer', 'phn']
